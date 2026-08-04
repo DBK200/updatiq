@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Updatiq — Status pages & maintenance communication for teams</title>
+  <meta name="description" content="Updatiq is the status page and maintenance-communication platform for teams who take uptime seriously. Publish incidents, schedule maintenance, and keep customers informed — automatically." />
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Updatiq — Status pages & maintenance communication" />
+  <meta property="og:description" content="Publish incidents, schedule maintenance, and keep customers informed — automatically." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+
+  <!-- ===================== ANNOUNCEMENT ===================== -->
+  <div class="announce" role="status">
+    <div class="container announce-inner">
+      <span class="announce-pill"><span class="dot"></span> Coming soon</span>
+      <span class="announce-text">Updatiq is launching soon — be the first to know.</span>
+      <a class="announce-cta" href="#waitlist">Join the waitlist →</a>
+    </div>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#top" aria-label="Updatiq home">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 51.7 28.5 A 20 20 0 1 1 35.5 12.3" stroke="#0f9d77" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+          <path d="M 25.5 38.5 L 44 20" stroke="#0f9d77" stroke-width="7.5" stroke-linecap="round"/>
+          <path d="M 52.5 11.5 L 47.8 25.2 L 38.4 15.8 Z" fill="#0f9d77"/>
+        </svg>
+        <span class="word">Updatiq</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#status">Status pages</a>
+        <a href="#developers">Developers</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#">Sign in</a>
+        <a class="btn btn-primary" href="#pricing">Get started</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">● Status pages &amp; incident communication</span>
+        <h1>Keep customers in the loop when it matters most.</h1>
+        <p class="lead">Updatiq is the status page and maintenance-communication platform for teams who take uptime seriously. Publish incidents, schedule maintenance, and keep customers informed — automatically.</p>
+        <form class="waitlist" id="waitlist" novalidate>
+          <label class="waitlist-label" for="wl-email">Get notified when we launch</label>
+          <div class="waitlist-row">
+            <input id="wl-email" class="waitlist-input" type="email" name="email"
+                   placeholder="you@company.com" autocomplete="email" required />
+            <button type="submit" class="btn btn-primary btn-lg waitlist-btn">Notify me</button>
+          </div>
+          <p class="waitlist-msg" id="waitlistMsg" role="status" aria-live="polite"></p>
+        </form>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" disabled aria-disabled="true" title="Available at launch">
+            Start for free
+          </button>
+          <a class="btn btn-ghost btn-lg" href="#status">See a live status page →</a>
+        </div>
+        <div class="hero-note">
+          <span><span class="tick">✓</span> No credit card required</span>
+          <span><span class="tick">✓</span> Statuspage-compatible API</span>
+          <span><span class="tick">✓</span> Set up in minutes</span>
+        </div>
+      </div>
+
+      <!-- Product mock: a live status page -->
+      <div class="mock" role="img" aria-label="Example Updatiq status page">
+        <div class="mock-bar"></div>
+        <div class="mock-body">
+          <div class="mock-head">
+            <div class="mock-title">Acme Cloud</div>
+            <span class="pill pill-ok"><span class="dot"></span> Operational</span>
+          </div>
+          <div class="banner-ok"><span class="dot" style="background:var(--emerald)"></span> All systems operational</div>
+          <div class="rows">
+            <div class="row"><span class="name">API Gateway</span><span class="tag tag-ok">Operational</span></div>
+            <div class="row"><span class="name">Dashboard</span><span class="tag tag-ok">Operational</span></div>
+            <div class="row"><span class="name">Billing</span><span class="tag tag-degraded">Degraded</span></div>
+            <div class="row"><span class="name">Email delivery</span><span class="tag tag-maint">Under maintenance</span></div>
+          </div>
+          <div class="mock-incident">
+            <div class="ihead">
+              <strong style="color:var(--navy);font-size:14px">Elevated latency on Billing</strong>
+              <span class="tag tag-degraded">Monitoring</span>
+            </div>
+            <div class="timeline">
+              <div class="t"><span class="lbl">Monitoring</span><span class="time">2:14 PM</span><p>A fix has been deployed and we're watching recovery.</p></div>
+              <div class="t"><span class="lbl">Identified</span><span class="time">1:52 PM</span><p>Root cause traced to a slow database node.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST / STATS ===================== -->
+  <section class="trust">
+    <div class="container trust-inner">
+      <span class="label">Everything you need to communicate status</span>
+      <div class="stats">
+        <div class="stat"><div class="n">5</div><div class="k">operational states</div></div>
+        <div class="stat"><div class="n">100%</div><div class="k">Statuspage-API compatible</div></div>
+        <div class="stat"><div class="n">∞</div><div class="k">maintenance windows</div></div>
+        <div class="stat"><div class="n">1‑click</div><div class="k">subscribe &amp; unsubscribe</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Features</span>
+        <h2>One place to plan, publish, and communicate</h2>
+        <p>From branded status pages to a developer-ready API — Updatiq covers the full lifecycle of keeping customers informed.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+          </div>
+          <h3>Branded status pages</h3>
+          <p>Give every application a public page under your workspace, with your logo, colors, and support links.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3>Live component status</h3>
+          <p>Operational, degraded, partial or major outage, under maintenance — with an auto “under maintenance” state during active windows.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 20h18L12 2z"/><path d="M12 9v4M12 17h.01"/></svg>
+          </div>
+          <h3>Incidents with a timeline</h3>
+          <p>Communicate unplanned issues through a clear lifecycle — investigating, identified, monitoring, resolved — customers can follow in real time.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+          </div>
+          <h3>Scheduled maintenance</h3>
+          <p>Plan windows ahead, publish per event, and let the page flip to “under maintenance” automatically while work is in progress.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </div>
+          <h3>Email that writes itself</h3>
+          <p>Templates with variables and conditional blocks, one-click subscribe and unsubscribe, and automatic reminders before planned work.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>
+          </div>
+          <h3>Developer-first</h3>
+          <p>A Statuspage-compatible JSON API, live SVG status badges, and a drop-in embed widget for any site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATUS PAGES ===================== -->
+  <section class="section section-tight" id="status" style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container split">
+      <div class="split-text reveal">
+        <span class="kicker">Status pages</span>
+        <h2>A status page your customers actually trust</h2>
+        <p class="desc">Every application gets a clean, branded public page that shows real-time health, active incidents, and upcoming maintenance — no engineering time required.</p>
+        <ul class="checklist">
+          <li><span class="c">✓</span> Your logo, brand color, and support email</li>
+          <li><span class="c">✓</span> Per-workspace URLs like <code>/status/acme/api</code></li>
+          <li><span class="c">✓</span> Customers subscribe by email in one click</li>
+          <li><span class="c">✓</span> Auto “under maintenance” while windows run</li>
+        </ul>
+      </div>
+      <div class="split-media reveal">
+        <div class="mock">
+          <div class="mock-bar"></div>
+          <div class="mock-body">
+            <div class="mock-head"><div class="mock-title">Acme Cloud</div><span class="pill pill-ok"><span class="dot"></span> Operational</span></div>
+            <div class="banner-ok"><span class="dot" style="background:var(--emerald)"></span> All systems operational</div>
+            <div class="rows">
+              <div class="row"><span class="name">API Gateway</span><span class="tag tag-ok">Operational</span></div>
+              <div class="row"><span class="name">Web app</span><span class="tag tag-ok">Operational</span></div>
+              <div class="row"><span class="name">Search</span><span class="tag tag-ok">Operational</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INCIDENTS ===================== -->
+  <section class="section">
+    <div class="container split reverse">
+      <div class="split-text reveal">
+        <span class="kicker">Incidents</span>
+        <h2>Communicate outages with a calm, clear timeline</h2>
+        <p class="desc">When something breaks, post updates as the situation develops. Each incident moves through a familiar lifecycle, and the public page — and your status indicator — update instantly.</p>
+        <ul class="checklist">
+          <li><span class="c">✓</span> Investigating → Identified → Monitoring → Resolved</li>
+          <li><span class="c">✓</span> Impact levels drive the overall status automatically</li>
+          <li><span class="c">✓</span> Full history stays visible after resolution</li>
+          <li><span class="c">✓</span> Draft privately, publish when you’re ready</li>
+        </ul>
+      </div>
+      <div class="split-media reveal">
+        <div class="mock">
+          <div class="mock-bar" style="background:linear-gradient(90deg,var(--orange),var(--coral))"></div>
+          <div class="mock-body">
+            <div class="mock-head"><strong style="color:var(--navy)">Checkout unavailable</strong><span class="tag tag-degraded">Monitoring</span></div>
+            <div class="timeline" style="margin-top:16px">
+              <div class="t"><span class="lbl">Monitoring</span><span class="time">14:31</span><p>Fix deployed. Error rates are dropping; watching recovery.</p></div>
+              <div class="t"><span class="lbl">Identified</span><span class="time">14:08</span><p>Root cause traced to the payments provider. Failing over now.</p></div>
+              <div class="t"><span class="lbl">Investigating</span><span class="time">13:55</span><p>We’re investigating elevated errors on checkout.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEVELOPERS ===================== -->
+  <section class="section" id="developers" style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container split">
+      <div class="split-text reveal">
+        <span class="kicker">Developers</span>
+        <h2>Built to plug into everything you already use</h2>
+        <p class="desc">Updatiq speaks the same JSON that the rest of the ecosystem does, so your monitors, dashboards, and READMEs work on day one.</p>
+        <ul class="checklist">
+          <li><span class="c">✓</span> <code>status.json</code> / <code>summary.json</code> — Statuspage-compatible</li>
+          <li><span class="c">✓</span> Live SVG status badges for READMEs &amp; sites</li>
+          <li><span class="c">✓</span> A one-line embeddable status widget</li>
+        </ul>
+        <p style="margin-top:20px">
+          <span class="badgeimg">
+            <svg width="132" height="20" viewBox="0 0 132 20" xmlns="http://www.w3.org/2000/svg" aria-label="status: operational">
+              <rect width="52" height="20" fill="#555"/><rect x="52" width="80" height="20" fill="#2ea44f"/>
+              <g fill="#fff" font-family="Verdana,sans-serif" font-size="11" text-anchor="middle"><text x="26" y="14">status</text><text x="92" y="14">operational</text></g>
+            </svg>
+          </span>
+        </p>
+      </div>
+      <div class="split-media reveal">
+        <div class="code">
+<span class="cmt"># Statuspage-compatible JSON API</span>
+<span class="k">curl</span> https://updatiq.app/api/public/status/<b>acme</b>/<b>api</b>/status.json
+{<span class="s">"status"</span>: {<span class="s">"indicator"</span>: <span class="s">"none"</span>,
+           <span class="s">"description"</span>: <span class="s">"All Systems Operational"</span>}}
+
+<span class="cmt"># Drop a live badge in your README</span>
+![Status](…/status/acme/api/<b>badge.svg</b>)
+
+<span class="cmt"># Embed a live status pill on any page</span>
+&lt;script src="…/status/acme/api/<b>embed.js</b>" async&gt;&lt;/script&gt;
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEAMS / SECURITY ===================== -->
+  <section class="section">
+    <div class="container split reverse">
+      <div class="split-text reveal">
+        <span class="kicker">Teams &amp; security</span>
+        <h2>Made for teams, trusted with your data</h2>
+        <p class="desc">Organize work into isolated workspaces, control who can do what, and keep a complete record of every action.</p>
+        <ul class="checklist">
+          <li><span class="c">✓</span> Multi-tenant workspaces with per-team data isolation</li>
+          <li><span class="c">✓</span> Role-based access — admins and members</li>
+          <li><span class="c">✓</span> Full audit log of every change and security event</li>
+          <li><span class="c">✓</span> Invite teammates by email in seconds</li>
+        </ul>
+      </div>
+      <div class="split-media reveal">
+        <div class="panel">
+          <div style="display:grid;gap:10px">
+            <div class="row"><span class="name">Acme — Platform</span><span class="tag tag-ok">Admin</span></div>
+            <div class="row"><span class="name">Acme — Support</span><span class="tag tag-maint">Member</span></div>
+            <div class="row"><span class="name">Incident opened · API Gateway</span><span class="tag" style="background:#fdeef0;color:var(--coral)">audit</span></div>
+            <div class="row"><span class="name">Maintenance published · Billing</span><span class="tag" style="background:#eef2f7;color:var(--dusk)">audit</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section class="section" id="pricing" style="background:#fff;border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2>Simple pricing that scales with you</h2>
+        <p>Start free. Upgrade when you need more applications, teammates, and channels.</p>
+      </div>
+      <div class="pricing">
+        <div class="price reveal">
+          <div class="tier">Free</div>
+          <div class="amt">$0<span> / mo</span></div>
+          <div class="sub">For side projects and getting started.</div>
+          <ul>
+            <li><span class="c">✓</span> 1 status page</li>
+            <li><span class="c">✓</span> Unlimited maintenance windows</li>
+            <li><span class="c">✓</span> Email subscribers</li>
+            <li><span class="c">✓</span> Public JSON API &amp; badge</li>
+          </ul>
+          <div class="cta-wrap"><a class="btn btn-ghost" href="#" style="width:100%;justify-content:center">Get started</a></div>
+        </div>
+        <div class="price pop reveal">
+          <span class="flag">Most popular</span>
+          <div class="tier">Team</div>
+          <div class="amt">$29<span> / mo</span></div>
+          <div class="sub">For growing teams that ship often.</div>
+          <ul>
+            <li><span class="c">✓</span> Up to 10 status pages</li>
+            <li><span class="c">✓</span> Incidents &amp; timelines</li>
+            <li><span class="c">✓</span> Team workspaces &amp; roles</li>
+            <li><span class="c">✓</span> Embed widget &amp; audit log</li>
+          </ul>
+          <div class="cta-wrap"><a class="btn btn-primary" href="#" style="width:100%;justify-content:center">Start free trial</a></div>
+        </div>
+        <div class="price reveal">
+          <div class="tier">Business</div>
+          <div class="amt">$99<span> / mo</span></div>
+          <div class="sub">For companies with customers to answer to.</div>
+          <ul>
+            <li><span class="c">✓</span> Unlimited status pages</li>
+            <li><span class="c">✓</span> Custom domains &amp; SSO</li>
+            <li><span class="c">✓</span> Priority support</li>
+            <li><span class="c">✓</span> Advanced audit &amp; retention</li>
+          </ul>
+          <div class="cta-wrap"><a class="btn btn-ghost" href="#" style="width:100%;justify-content:center">Contact sales</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions, answered</h2>
+      </div>
+      <div class="faq reveal">
+        <details open><summary>What is Updatiq?</summary><p>Updatiq is a status page and maintenance-communication platform. It gives each of your applications a branded public page, lets you communicate incidents and scheduled maintenance, and notifies subscribers by email — all from one place.</p></details>
+        <details><summary>Does it have an API?</summary><p>Yes. Every public page exposes a Statuspage-compatible JSON API (<code>status.json</code>, <code>summary.json</code>, <code>incidents.json</code>, and more), so your existing monitors and integrations work out of the box. There's also a live SVG badge and a one-line embed widget.</p></details>
+        <details><summary>Can customers subscribe to updates?</summary><p>Absolutely. Visitors subscribe by email in one click and receive announcements, reminders before planned maintenance, and completion notices. Every message includes a one-click unsubscribe.</p></details>
+        <details><summary>How are incidents different from maintenance?</summary><p>Maintenance is planned work you schedule ahead of time. Incidents are unplanned issues you communicate as they happen, moving through investigating → identified → monitoring → resolved. Both appear on the status page and drive the overall status indicator.</p></details>
+        <details><summary>Do you support teams and permissions?</summary><p>Yes — organize work into isolated workspaces, invite teammates by email, and assign admin or member roles. A full audit log records every change and security event.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="cta reveal">
+        <h2>Start keeping customers in the loop today</h2>
+        <p>Set up your first branded status page in minutes. No credit card required.</p>
+        <div class="hero-actions">
+          <a class="btn btn-white btn-lg" href="#waitlist">Join the waitlist</a>
+          <a class="btn btn-light btn-lg" href="#status">See a live status page →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="about">
+          <a class="logo" href="#top">
+            <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M 51.7 28.5 A 20 20 0 1 1 35.5 12.3" stroke="#0f9d77" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+              <path d="M 25.5 38.5 L 44 20" stroke="#0f9d77" stroke-width="7.5" stroke-linecap="round"/>
+              <path d="M 52.5 11.5 L 47.8 25.2 L 38.4 15.8 Z" fill="#0f9d77"/>
+            </svg>
+            <span class="word">Updatiq</span>
+          </a>
+          <p>Status pages and maintenance communication for teams who take uptime seriously.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#status">Status pages</a></li>
+            <li><a href="#developers">Developers</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#developers">API reference</a></li>
+            <li><a href="#">Status badge</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© <span id="year">2026</span> Updatiq. All rights reserved.</span>
+        <span>Made for teams who take uptime seriously.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
